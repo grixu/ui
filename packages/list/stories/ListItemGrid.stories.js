@@ -1,4 +1,4 @@
-import ListItemGrid from "@/ItemGrid.vue"
+import ListItemGrid from "../src/ItemGrid.vue"
 import Button from '@grixu/button'
 import Avatar from '@grixu/avatar'
 import IconTrash from '~icons/heroicons-solid/trash'

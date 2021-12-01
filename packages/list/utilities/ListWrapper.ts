@@ -1,5 +1,5 @@
-import ListItemGrid from "@/ItemGrid.vue";
-import ListItemStacked from "@/ItemStacked.vue";
+import ListItemGrid from "../src/ItemGrid.vue";
+import ListItemStacked from "../src/ItemStacked.vue";
 import { z } from "zod";
 
 export interface ListWrapperComponents {

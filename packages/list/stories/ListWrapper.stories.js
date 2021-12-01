@@ -1,4 +1,4 @@
-import ListWrapper from "@/Wrapper.vue"
+import ListWrapper from "../src/Wrapper.vue"
 import Button from '@grixu/button'
 import Avatar from '@grixu/avatar'
 import IconTrash from '~icons/heroicons-solid/trash'

@@ -1,4 +1,4 @@
-import ActionList from '@/ActionList.vue'
+import ActionList from '../src/ActionList.vue'
 import Avatar from '@grixu/avatar'
 import faker from 'faker'
 

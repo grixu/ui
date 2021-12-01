@@ -1,4 +1,4 @@
-import ListItemStacked from "@/ItemStacked.vue"
+import ListItemStacked from "../src/ItemStacked.vue"
 import Button from '@grixu/button'
 import Avatar from '@grixu/avatar'
 import IconTrash from '~icons/heroicons-solid/trash'
