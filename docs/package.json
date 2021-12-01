@@ -1,0 +1,16 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Docs for UI packages",
+  "main": "index.js",
+  "author": "Mateusz Gostański (grixu)",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^0.20.1"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  }
+}
