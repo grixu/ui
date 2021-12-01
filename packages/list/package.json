@@ -1,0 +1,58 @@
+{
+  "name": "@grixu/list",
+  "version": "1.0.0",
+  "description": "List wrapper for presenting array of data as stacked or grid list",
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "ui",
+    "list",
+    "grid"
+  ],
+  "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "@grixu/paginator": "^1.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.22",
+    "zod": "^3.11.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "@babel/preset-env": "^7.16.4",
+    "@types/jest": "^27.0.1",
+    "@vue/test-utils": "^2.0.0-rc.17",
+    "@vue/vue3-jest": "^27.0.0-alpha.3",
+    "babel-jest": "^27.3.1",
+    "@grixu/eslint-config-grixu": "^1.0.0",
+    "@grixu/button": "^1.0.0",
+    "@grixu/avatar": "^1.0.0",
+    "jest": "^27.3.1",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "jest-watch-typeahead": "^1.0.0",
+    "ts-jest": "^27.0.7",
+    "@storybook/vue3": "^6.4.0",
+    "typescript": "^4.5.2",
+    "vue": "3.2.22",
+    "zod": "^3.11.6",
+    "@iconify/json": "^1.1.435",
+    "unplugin-icons": "^0.12.20"
+  }
+}
