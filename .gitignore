@@ -1,0 +1,16 @@
+node_modules
+coverage
+tmp
+.idea
+
+.DS_Store
+Thumbs.db
+
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
