@@ -1,4 +1,4 @@
-import 'virtual:windi.css'
+import 'windi.css'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

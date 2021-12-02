@@ -1,5 +1,5 @@
-const WindiCSS = require("vite-plugin-windicss").default
-const Icons = require('unplugin-icons/vite')
+const WindiCSSWebpackPlugin = require("windicss-webpack-plugin")
+const Icons = require('unplugin-icons/webpack')
 
 module.exports = {
   "stories": [
@@ -12,11 +12,12 @@ module.exports = {
   ],
   "framework": "@storybook/vue3",
   "core": {
-    "builder": "storybook-builder-vite"
+    "builder": "webpack5"
   },
-  async viteFinal(config) {
+  "webpackFinal": async (config) => {
+    config.plugins.push(new WindiCSSWebpackPlugin())
     config.plugins.push(Icons({ compiler: 'vue3' }))
-    config.plugins.push(WindiCSS())
+
     return config
-  },
+  }
 }
