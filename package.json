@@ -56,8 +56,7 @@
     "@vuedx/typecheck": "^0.7.4",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "vue-tsc": "^0.29.8",
-    "husky": "^7.0.4",
-    "lint-staged": "^10.5.4"
+    "husky": "^7.0.0"
   },
   "workspaces": {
     "packages": [
@@ -69,11 +68,8 @@
     "test": "jest",
     "lint": "eslint --fix .",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
-    }
+    "storybook:build": "build-storybook",
+    "prepare": "husky install",
+    "precommit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
   }
 }
