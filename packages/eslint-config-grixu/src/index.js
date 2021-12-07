@@ -12,6 +12,7 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:storybook/recommended"
   ],
+  ignorePatterns: ["dist/**/*", "coverage/**/*"],
   parserOptions: {
     ecmaVersion: 2020,
   },
@@ -37,7 +38,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**/__tests__/*.{j,t}s?(x)", "**/tests/unit/**/*.spec.{j,t}s?(x)"],
+      files: ["**/tests/*.{j,t}s?(x)", "**/tests/**/*.spec.{j,t}s?(x)"],
       env: {
         jest: true,
       },
