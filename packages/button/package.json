@@ -11,7 +11,6 @@
   "homepage": "",
   "license": "MIT",
   "sideEffects": false,
-  "type": "module",
   "main": "./dist/index.cjs.js",
   "exports": {
     "import": "./dist/index.esm.js",
@@ -22,11 +21,11 @@
   "unpkg": "./dist/index.umd.js",
   "jsdelivr": "./dist/index.umd.js",
   "types": "./dist/types/index.d.ts",
-  "styles": "./dist/index.css",
+  "style": "./dist/index.css",
   "directories": {
     "src": "src",
     "dist": "dist",
-    "test": "__tests__"
+    "test": "tests"
   },
   "files": [
     "dist/**/*",
@@ -36,8 +35,9 @@
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "test": "jest",
-    "lint": "eslint . --fix",
-    "precommit": "lint-staged"
+    "lint:js": "eslint . --fix",
+    "lint:css": "stylelint src -f verbose",
+    "precommit": "yarn lint:js && yarn lint:css"
   },
   "peerDependencies": {
     "vue": "^3.2.22"
@@ -52,18 +52,20 @@
     "@vue/vue3-jest": "^27.0.0-alpha.3",
     "babel-jest": "^27.3.1",
     "@grixu/eslint-config-grixu": "^1.0.0",
+    "@grixu/rollup-config": "^1.0.0",
+    "@grixu/stylelint-config": "^1.0.0",
     "jest": "^27.3.1",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
     "jest-watch-typeahead": "^1.0.0",
     "ts-jest": "^27.0.7",
+    "eslint": "^8.4.1",
+    "prettier": "^2.4.1",
     "@storybook/vue3": "^6.4.0",
-    "@grixu/rollup-config": "^1.0.0",
     "vue": "3.2.22",
     "@vue/compiler-sfc": "^3.2.4",
     "windicss": "^3.2.1",
     "typescript": "^4.5.2",
-    "vue-tsc": "^0.29.8",
-    "lint-staged": "^12.1.2"
+    "vue-tsc": "^0.29.8"
   }
 }
