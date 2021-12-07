@@ -25,7 +25,7 @@ module.exports = {
   },
   // serializer for snapshots
   snapshotSerializers: ["jest-serializer-vue"],
-  testMatch: ["**/tests/unit/**/*.spec.[jt]s?(x)", "**/__tests__/*.[jt]s?(x)"],
+  testMatch: ["**/tests/**/*.spec.[jt]s?(x)", "**/tests/*.[jt]s?(x)"],
   // https://github.com/facebook/jest/issues/6766
   testURL: "http://localhost/",
   watchPlugins: [require.resolve("jest-watch-typeahead/filename"), require.resolve("jest-watch-typeahead/testname")],
@@ -46,7 +46,7 @@ module.exports = {
     "<rootDir>/coverage/",
     "<rootDir>/dist/",
     "<rootDir>/node_modules/",
-    "(__tests__/.*.mock).tsx?$",
+    "(tests/.*.mock).tsx?$",
   ],
   coverageDirectory: "<rootDir>/coverage/",
   verbose: true,
