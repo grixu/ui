@@ -10,17 +10,34 @@
   "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "src/index.js",
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs.js",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
+  },
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "types": "./dist/types/index.d.ts",
+  "styles": "./dist/index.css",
   "directories": {
-    "lib": "src",
+    "src": "src",
+    "dist": "dist",
     "test": "__tests__"
   },
   "files": [
-    "src"
+    "dist/**/*",
+    "src",
+    "README.md"
   ],
   "scripts": {
+    "build": "rollup -c rollup.config.js",
     "test": "jest",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "precommit": "lint-staged"
   },
   "peerDependencies": {
     "vue": "^3.2.22"
@@ -29,6 +46,7 @@
     "@babel/core": "^7.16.0",
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
     "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
     "@types/jest": "^27.0.1",
     "@vue/test-utils": "^2.0.0-rc.17",
     "@vue/vue3-jest": "^27.0.0-alpha.3",
@@ -40,7 +58,12 @@
     "jest-watch-typeahead": "^1.0.0",
     "ts-jest": "^27.0.7",
     "@storybook/vue3": "^6.4.0",
+    "@grixu/rollup-config": "^1.0.0",
+    "vue": "3.2.22",
+    "@vue/compiler-sfc": "^3.2.4",
+    "windicss": "^3.2.1",
     "typescript": "^4.5.2",
-    "vue": "3.2.22"
+    "vue-tsc": "^0.29.8",
+    "lint-staged": "^12.1.2"
   }
 }
