@@ -131,6 +131,8 @@ const createConfig = (format, config, banner, pkg) => {
       ignore(['virtual:windi.css']),
       vue(),
       babel({
+        presets: ['@babel/preset-typescript'],
+        configFile: false,
         extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue', '.ts', '.tsx']
       }),
       ...productionPlugins

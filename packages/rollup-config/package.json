@@ -16,7 +16,6 @@
   "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
   "homepage": "",
   "license": "MIT",
-  "type": "module",
   "main": "./src/index.cjs",
   "module": "./src/index.mjs",
   "exports": {
