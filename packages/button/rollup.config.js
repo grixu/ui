@@ -1,5 +1,5 @@
-const {createBanner, createConfig} = require("@grixu/rollup-config")
-const pkg = require('./package.json')
+const { createBanner, createConfig } = require("@grixu/rollup-config")
+const pkg = require("./package.json")
 
 const banner = createBanner(pkg)
 
@@ -14,13 +14,13 @@ const outputConfigs = {
   },
   browser: {
     file: pkg.browser,
-    format: 'umd',
+    format: "umd",
     minify: true,
-    css: true
+    css: true,
   },
 }
 
 const allFormats = Object.keys(outputConfigs)
-const packageConfigs = allFormats.map((format) => createConfig(format, outputConfigs[format], banner, pkg))
+const packageConfigs = allFormats.map(format => createConfig(format, outputConfigs[format], banner, pkg))
 
 export default packageConfigs
