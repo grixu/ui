@@ -70,5 +70,8 @@
     "vue": "3.2.22",
     "vue-tsc": "^0.29.8",
     "windicss": "^3.2.1"
+  },
+  "dependencies": {
+    "vue-use-variant": "^0.1.1"
   }
 }
