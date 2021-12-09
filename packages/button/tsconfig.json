@@ -1,44 +1,11 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "strict": true,
-    "noImplicitReturns": true,
-    "forceConsistentCasingInFileNames": true,
-
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-
     "outDir": "dist/types",
-    "noEmit": false,
-    "declaration": true,
-    "sourceMap": true,
-
-    "esModuleInterop": true,
-    "removeComments": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-
-    "lib": ["esnext", "dom"],
-    "types": [
-      "webpack-env",
-      "node",
-      "jest"
-    ],
-    "plugins": [
-      {
-        "name": "@vuedx/typescript-plugin-vue",
-      }
-    ]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
     "types"
-  ],
-  "exclude": [
-    "node_modules",
-    "stories",
-    "dist"
   ]
 }

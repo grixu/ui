@@ -9,7 +9,6 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
 
-    "outDir": "dist/types",
     "noEmit": false,
     "declaration": true,
     "sourceMap": true,
@@ -22,7 +21,6 @@
     "lib": ["esnext", "dom"],
     "types": [
       "webpack-env",
-      "unplugin-icons/types/vue",
       "node",
       "jest"
     ],
@@ -32,14 +30,6 @@
       }
     ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx",
-    "types"
-  ],
   "exclude": [
     "node_modules",
     "stories",
