@@ -1,5 +1,6 @@
 const WindiCSSWebpackPlugin = require("windicss-webpack-plugin")
 const Icons = require('unplugin-icons/webpack')
+const path = require("path")
 
 module.exports = {
   "stories": [
@@ -15,7 +16,9 @@ module.exports = {
     "builder": "webpack5"
   },
   "webpackFinal": async (config) => {
-    config.plugins.push(new WindiCSSWebpackPlugin())
+    config.plugins.push(new WindiCSSWebpackPlugin({
+      config: path.join(__dirname, 'windi.config.js')
+    }))
     config.plugins.push(Icons({ compiler: 'vue3' }))
 
     return config
