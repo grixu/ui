@@ -16728,6 +16728,13 @@ vue-tsc@^0.29.8:
     "@volar/shared" "0.29.8"
     vscode-vue-languageservice "0.29.8"
 
+vue-use-variant@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/vue-use-variant/-/vue-use-variant-0.1.1.tgz#ac1dc323590ff0e23d1a6ec235fc805c636d8927"
+  integrity sha512-LqrKjdnzDMhZGIN2v/0p37tieLu/gI6liRqJjKtRxqjfId97jpNTIS63IrYJ8nTGf5CXF+OY/Nkj0u3xIPhLcg==
+  dependencies:
+    typescript "^4.4.3"
+
 vue@3.2.22:
   version "3.2.22"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.22.tgz#46e4dd89e98cc4b851ae1eb35f00ced413a34bb7"
