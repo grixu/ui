@@ -125,7 +125,9 @@ const createConfig = (format, config, banner, pkg) => {
         isGlobalBuild,
         isNodeBuild,
       ),
-      resolve(),
+      resolve({
+        extensions: ['.mjs', '.js', '.json', '.node', '.ts']
+      }),
       commonjs(),
       ...cssPlugins,
       ignore(['virtual:windi.css']),
