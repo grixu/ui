@@ -4,7 +4,7 @@ import { composeStories } from "@storybook/testing-vue3"
 import * as stories from "../stories/Button.stories.js"
 
 describe("Button", () => {
-  const { Link, Primary, Success, Danger, Warning, Info, Disabled, WithIcon, CustomColor } = composeStories(stories)
+  const { Link, Primary, Success, Danger, Warning, Info, Disabled, WithIcon } = composeStories(stories)
 
   test("component itself & slot value are visible", () => {
     const wrapper = mount(Link())
@@ -49,10 +49,5 @@ describe("Button", () => {
       expect(actual).not.toBe(previous)
       previous = actual
     })
-  })
-
-  it("have options to pass custom classes in color", () => {
-    const wrapper = mount(CustomColor())
-    expect(wrapper.find("[data-testid='button']").classes().join(" ")).toContain(stories.CustomColor.args.customColor)
   })
 })
