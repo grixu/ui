@@ -6,8 +6,12 @@ export default {
   title: "components/Button",
   args: {
     default: "Click me",
-    color: "link",
-    customColor: "",
+    link: false,
+    primary: false,
+    warning: false,
+    danger: false,
+    info: false,
+    success: false,
     disabled: false,
     withIcon: false,
   },
@@ -29,16 +33,65 @@ export default {
       description:
         "Use this slot to put icon into button. But remember about adding with-icon prop to enable rendering it",
     },
-    color: {
-      options: ["primary", "success", "danger", "info", "warning", "link"],
-      type: "string",
-      control: { type: "select" },
+    primary: {
+      type: {
+        name: "boolean",
+        required: false,
+      },
       table: {
         category: "Props",
-        defaultValue: { summary: "link" },
+        defaultValue: { summary: false },
       },
-      description:
-        "Through this property you can select built-in color theme or define yours putting here CSS classes which describe text & background color",
+    },
+    success: {
+      type: {
+        name: "boolean",
+        required: false,
+      },
+      table: {
+        category: "Props",
+        defaultValue: { summary: false },
+      },
+    },
+    danger: {
+      type: {
+        name: "boolean",
+        required: false,
+      },
+      table: {
+        category: "Props",
+        defaultValue: { summary: false },
+      },
+    },
+    info: {
+      type: {
+        name: "boolean",
+        required: false,
+      },
+      table: {
+        category: "Props",
+        defaultValue: { summary: false },
+      },
+    },
+    warning: {
+      type: {
+        name: "boolean",
+        required: false,
+      },
+      table: {
+        category: "Props",
+        defaultValue: { summary: false },
+      },
+    },
+    link: {
+      type: {
+        name: "boolean",
+        required: false,
+      },
+      table: {
+        category: "Props",
+        defaultValue: { summary: false },
+      },
     },
     withIcon: {
       type: {
@@ -62,10 +115,6 @@ export default {
         defaultValue: { summary: false },
       },
       description: "Simple boolean flag to make button disabled",
-    },
-    customColor: {
-      control: { type: "text" },
-      description: "Additional field created only in Custom Color Story to handle declaring own color.",
     },
     onClick: {
       name: "On click event",
@@ -98,50 +147,31 @@ const Template = args => ({
 })
 
 export const Link = Template.bind({})
+Link.args = { link: true }
 
 export const Primary = Template.bind({})
-Primary.args = { color: "primary" }
+Primary.args = { primary: true }
 
 export const Success = Template.bind({})
-Success.args = { color: "success" }
+Success.args = { success: true }
 
 export const Danger = Template.bind({})
-Danger.args = { color: "danger" }
+Danger.args = { danger: true }
 
 export const Warning = Template.bind({})
-Warning.args = { color: "warning" }
+Warning.args = { warning: true }
 
 export const Info = Template.bind({})
-Info.args = { color: "info" }
+Info.args = { info: true }
 
 export const Disabled = Template.bind({})
 Disabled.args = {
-  color: "primary",
+  primary: true,
   disabled: true,
 }
 
 export const WithIcon = Template.bind({})
 WithIcon.args = {
   withIcon: true,
-  color: "primary",
-}
-
-const CustomTemplate = args => ({
-  components: { Button, IconClose },
-  setup() {
-    return { args }
-  },
-  template: `
-    <Button :color="args.customColor.length > 0 ? args.customColor : args.color" :with-icon="args.withIcon">
-    <template #icon>
-      <IconClose />
-    </template>
-    {{ args.default }}
-    </Button>`,
-})
-export const CustomColor = CustomTemplate.bind({})
-CustomColor.args = {
-  withIcon: true,
-  customColor:
-    "px-3 py-2 bg-green-600 text-white focus:ring-2 focus:ring-offset-2 focus:ring-green-500 hover:bg-green-700",
+  primary: true,
 }
