@@ -9,6 +9,7 @@
   "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
   "homepage": "",
   "license": "MIT",
+  "type": "commonjs",
   "main": "src/index.js",
   "directories": {
     "lib": "src"
