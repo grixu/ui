@@ -7,7 +7,8 @@ const {terser} = require("rollup-plugin-terser")
 const WindiCSS = require('rollup-plugin-windicss').default
 const { babel } = require('@rollup/plugin-babel')
 const cssOnly = require('rollup-plugin-css-only')
-const ignore = require("rollup-plugin-ignore")
+const Icons = require('unplugin-icons/rollup')
+const path = require("path");
 
 const getAuthors = (pkg) => {
   const { contributors, author } = pkg
@@ -73,7 +74,11 @@ const createReplacePlugin = (
 }
 
 const createConfig = (format, config, banner, pkg) => {
-  const { file: fileName, format: fileFormat, minify, css } = config
+  if (format === 'css') {
+    return createCssConfig(config, banner)
+  }
+
+  const { file: fileName, format: fileFormat, minify } = config
   const output = {
     format: fileFormat,
     file: fileName,
@@ -91,15 +96,7 @@ const createConfig = (format, config, banner, pkg) => {
 
   if (isGlobalBuild) output.name = pascalcase(pkg.name)
 
-  let cssPlugins = []
   const productionPlugins = []
-
-  if (css) {
-    cssPlugins = [
-      ...WindiCSS(),
-      cssOnly({ output: 'index.css' }),
-    ]
-  }
 
   if (minify) {
     productionPlugins.push(
@@ -125,12 +122,11 @@ const createConfig = (format, config, banner, pkg) => {
         isGlobalBuild,
         isNodeBuild,
       ),
+      Icons({ compiler: 'vue3' }),
       resolve({
         extensions: ['.mjs', '.js', '.json', '.node', '.ts']
       }),
       commonjs(),
-      ...cssPlugins,
-      ignore(['virtual:windi.css']),
       vue(),
       babel({
         presets: ['@babel/preset-typescript'],
@@ -143,8 +139,30 @@ const createConfig = (format, config, banner, pkg) => {
   }
 }
 
+const createCssConfig = (config, banner = '') => {
+  const { file: fileName } = config
+  const output = {
+    format: 'es',
+    file: fileName,
+    banner
+  }
+
+  return {
+    input: path.join(__dirname, 'css.js'),
+    output,
+    plugins: [
+      resolve({
+        extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.css']
+      }),
+      ...WindiCSS(),
+      cssOnly({ output: fileName.replace('./dist/', '') }),
+    ],
+  }
+}
+
 module.exports = {
   createConfig,
+  createCssConfig,
   createReplacePlugin,
   createBanner
 }
