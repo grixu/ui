@@ -44,8 +44,8 @@
     "vue": "^3.2.22"
   },
   "devDependencies": {
-    "@grixu/jest-config": "^1.0.0",
     "@grixu/eslint-config": "^1.0.0",
+    "@grixu/jest-config": "^1.0.0",
     "@grixu/rollup-config": "^1.0.0",
     "@grixu/stylelint-config": "^1.0.0",
     "@vuedx/typecheck": "^0.7.4",

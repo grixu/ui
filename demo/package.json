@@ -5,18 +5,18 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "vue": "^3.2.22",
-    "@grixu/button": "^1.0.0"
+    "@grixu/button": "^1.0.0",
+    "vue": "^3.2.22"
   },
   "devDependencies": {
-    "vite": "^2.7.1",
+    "@iconify/json": "^1.1.435",
     "@vitejs/plugin-vue": "^2.0.0",
     "typescript": "^4.5.2",
+    "unplugin-icons": "^0.12.20",
+    "vite": "^2.7.1",
+    "vite-plugin-windicss": "^1.5.4",
     "vue-tsc": "0.29.8",
     "windicss": "^3.2.1",
-    "vite-plugin-windicss": "^1.5.4",
-    "unplugin-icons": "^0.12.20",
-    "@iconify/json": "^1.1.435",
     "zod": "^3.11.6"
   },
   "scripts": {

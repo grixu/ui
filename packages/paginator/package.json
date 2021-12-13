@@ -47,13 +47,13 @@
   },
   "devDependencies": {
     "@grixu/eslint-config": "^1.0.0",
+    "@grixu/jest-config": "^1.0.0",
     "@grixu/rollup-config": "^1.0.0",
     "@grixu/stylelint-config": "^1.0.0",
-    "@grixu/jest-config": "^1.0.0",
-    "typescript": "^4.5.2",
     "@vuedx/typecheck": "^0.7.4",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "faker": "^5.5.3",
+    "typescript": "^4.5.2",
     "vue-tsc": "^0.29.8",
     "windicss": "^3.2.1"
   }

@@ -47,23 +47,23 @@
     "@grixu/paginator": "^1.0.0"
   },
   "peerDependencies": {
-    "vue": "^3.2.22",
-    "zod": "^3.11.6",
     "@iconify/json": "^1.1.435",
-    "unplugin-icons": "^0.12.20"
+    "unplugin-icons": "^0.12.20",
+    "vue": "^3.2.22",
+    "zod": "^3.11.6"
   },
   "devDependencies": {
-    "@grixu/jest-config": "^1.0.0",
+    "@grixu/avatar": "^1.0.0",
+    "@grixu/button": "^1.0.0",
     "@grixu/eslint-config": "^1.0.0",
+    "@grixu/jest-config": "^1.0.0",
+    "@grixu/paginator": "^1.0.0",
     "@grixu/rollup-config": "^1.0.0",
     "@grixu/stylelint-config": "^1.0.0",
-    "@grixu/paginator": "^1.0.0",
-    "@grixu/button": "^1.0.0",
-    "@grixu/avatar": "^1.0.0",
-    "typescript": "^4.5.2",
-    "vue": "3.2.22",
-    "zod": "^3.11.6",
     "@iconify/json": "^1.1.435",
-    "unplugin-icons": "^0.12.20"
+    "typescript": "^4.5.2",
+    "unplugin-icons": "^0.12.20",
+    "vue": "3.2.22",
+    "zod": "^3.11.6"
   }
 }

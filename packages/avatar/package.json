@@ -43,21 +43,21 @@
     "precommit": "yarn lint"
   },
   "peerDependencies": {
-    "vue": "^3.2.22",
     "@iconify/json": "^1.1.435",
-    "unplugin-icons": "^0.12.23"
+    "unplugin-icons": "^0.12.23",
+    "vue": "^3.2.22"
   },
   "devDependencies": {
-    "@grixu/jest-config": "^1.0.0",
     "@grixu/eslint-config": "^1.0.0",
+    "@grixu/jest-config": "^1.0.0",
     "@grixu/rollup-config": "^1.0.0",
     "@grixu/stylelint-config": "^1.0.0",
-    "typescript": "^4.5.2",
     "@vuedx/typecheck": "^0.7.4",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
+    "typescript": "^4.5.2",
+    "unplugin-icons": "^0.12.23",
     "vue": "3.2.22",
     "vue-tsc": "^0.29.8",
-    "windicss": "^3.2.1",
-    "unplugin-icons": "^0.12.23"
+    "windicss": "^3.2.1"
   }
 }
