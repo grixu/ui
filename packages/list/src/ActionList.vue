@@ -14,13 +14,15 @@
           <div class="flex items-center gap-x-3 flex-grow">
             <slot :item="item"></slot>
           </div>
-          <button
-            data-testid="action-list-delete-button"
-            class="p-2"
-            @click="emitClick(item)"
-          >
-            <IconClose class="hover:text-primary-dark cursor-pointer" />
-          </button>
+            <slot :item="item" name="action">
+              <button
+                data-testid="action-list-delete-button"
+                class="p-2"
+                @click="emitClick(item)"
+              >
+              <IconClose class="hover:text-primary-dark cursor-pointer" />
+            </button>
+          </slot>
         </div>
       </li>
     </ul>
