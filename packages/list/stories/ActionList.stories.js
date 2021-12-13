@@ -1,14 +1,14 @@
-import ActionList from '../src/ActionList.vue'
-import Avatar from '@grixu/avatar'
-import faker from 'faker'
+import ActionList from "../src/ActionList.vue"
+import Avatar from "@grixu/avatar"
+import faker from "faker"
 
 export default {
   component: ActionList,
-  title: 'components/ActionList',
+  title: "components/ActionList",
   args: {
-    title: 'Example title',
+    title: "Example title",
     perPage: 25,
-    amount: 10
+    amount: 10,
   },
   argTypes: {
     items: {
@@ -25,19 +25,21 @@ export default {
     },
     amount: {
       table: {
-        category: "Story"
+        category: "Story",
       },
       description: "Amount of items generated in story.",
-    }
+    },
   },
 }
 
-const Template = (args) => ({
+const Template = args => ({
   components: { ActionList, Avatar },
   setup() {
-    const items = Array(args.amount).fill(1).map(() => ({
-      name: faker.name.findName()
-    }))
+    const items = Array(args.amount)
+      .fill(1)
+      .map(() => ({
+        name: faker.name.findName(),
+      }))
     return { args, items }
   },
   template: `<ActionList :items="items" :per-page="args.perPage">
@@ -49,13 +51,15 @@ const Template = (args) => ({
 export const ShortList = Template.bind({})
 ShortList.args = { amount: 10 }
 
-const CustomTemplate = (args) => ({
+const CustomTemplate = args => ({
   components: { ActionList },
   setup() {
-    const items = Array(args.amount).fill(1).map(() => ({
-      id: Math.floor(Math.random() * 1000),
-      name: faker.name.findName()
-    }))
+    const items = Array(args.amount)
+      .fill(1)
+      .map(() => ({
+        id: Math.floor(Math.random() * 1000),
+        name: faker.name.findName(),
+      }))
     return { args, items }
   },
   template: `<ActionList :items="items" :per-page="args.perPage">

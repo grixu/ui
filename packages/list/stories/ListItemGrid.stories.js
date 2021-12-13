@@ -1,74 +1,74 @@
 import ListItemGrid from "../src/ItemGrid.vue"
-import Button from '@grixu/button'
-import Avatar from '@grixu/avatar'
-import IconTrash from '~icons/heroicons-solid/trash'
-import IconFolderOpen from '~icons/heroicons-solid/folder-open'
+import Button from "@grixu/button"
+import Avatar from "@grixu/avatar"
+import IconTrash from "~icons/heroicons-solid/trash"
+import IconFolderOpen from "~icons/heroicons-solid/folder-open"
 
 export default {
-	component: ListItemGrid,
-	title: "List/ItemGrid",
-	args: {
-		content: "Example content here",
-		date: "21.04.21",
-		fullname: "John Doe",
-	},
-	argTypes: {
-		item: {
-			type: {
-				name: 'object',
-				required: true
-			},
-			table: {
-				category: "Props",
-			},
-			description: "An object which is bind in every scoped slot",
-		},
-		default: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-		header: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-		avatar: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-		details: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-		buttons: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-	},
+  component: ListItemGrid,
+  title: "List/ItemGrid",
+  args: {
+    content: "Example content here",
+    date: "21.04.21",
+    fullname: "John Doe",
+  },
+  argTypes: {
+    item: {
+      type: {
+        name: "object",
+        required: true,
+      },
+      table: {
+        category: "Props",
+      },
+      description: "An object which is bind in every scoped slot",
+    },
+    default: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+    header: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+    avatar: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+    details: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+    buttons: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+  },
 
-	decorators: [() => ({ template: '<div style="width: 350px;"><story/></div>' })],
-	parameters: {
-		docs: {
-			page: null,
-		},
-	},
+  decorators: [() => ({ template: '<div style="width: 350px;"><story/></div>' })],
+  parameters: {
+    docs: {
+      page: null,
+    },
+  },
 }
 
-const Template = (args) => ({
-	components: { ListItemGrid, Avatar, Button, IconTrash },
-	setup() {
-		const item = {
-			fullname: args.fullname,
-			content: args.content,
-			date: args.date,
-		}
-		return { item }
-	},
-	template: `<ListItemGrid :item="item">
+const Template = args => ({
+  components: { ListItemGrid, Avatar, Button, IconTrash },
+  setup() {
+    const item = {
+      fullname: args.fullname,
+      content: args.content,
+      date: args.date,
+    }
+    return { item }
+  },
+  template: `<ListItemGrid :item="item">
 		<template #header="{ item }">{{ item.fullname}}</template>
 		<template #default="{ item }">{{ item.content}}</template>
 		<template #avatar="{ item }">
@@ -89,20 +89,20 @@ const Template = (args) => ({
 
 export const ExampleOne = Template.bind({})
 
-const TemplateTwo = (args) => ({
-	components: { ListItemGrid, Avatar, Button, IconTrash, IconFolderOpen },
+const TemplateTwo = args => ({
+  components: { ListItemGrid, Avatar, Button, IconTrash, IconFolderOpen },
 
-	setup() {
-		const item = {
-			fullname: args.fullname,
-			content: args.content,
-			date: args.date,
-		}
+  setup() {
+    const item = {
+      fullname: args.fullname,
+      content: args.content,
+      date: args.date,
+    }
 
-		return { item }
-	},
+    return { item }
+  },
 
-	template: `<ListItemGrid :item="item">
+  template: `<ListItemGrid :item="item">
 		<template #header="{ item }">
      	<h1 class="text-2xl">{{ item.fullname }}</h1>
 		</template>

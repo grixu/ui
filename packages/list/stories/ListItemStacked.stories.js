@@ -1,64 +1,64 @@
 import ListItemStacked from "../src/ItemStacked.vue"
-import Button from '@grixu/button'
-import Avatar from '@grixu/avatar'
-import IconTrash from '~icons/heroicons-solid/trash'
-import IconFolderOpen from '~icons/heroicons-solid/folder-open'
+import Button from "@grixu/button"
+import Avatar from "@grixu/avatar"
+import IconTrash from "~icons/heroicons-solid/trash"
+import IconFolderOpen from "~icons/heroicons-solid/folder-open"
 
 export default {
-	component: ListItemStacked,
-	title: "List/ItemStacked",
-	args: {
-		headerText: "Attachment",
-		text: "Lorem ipsum dolor amat asum",
-		date: "21.04.21",
-	},
-	argTypes: {
-		item: {
-			table: {
-				category: "Props",
-			},
-			description: "An object which is bind in every scoped slot",
-		},
-		header: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-		avatar: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-		default: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-		buttons: {
-			table: {
-				category: "Scoped Slots",
-			},
-		},
-	},
-	parameters: {
-		docs: {
-			description: {
-				component: "Component designed to display data from objects in stacked list elements.",
-			},
-		},
-	},
+  component: ListItemStacked,
+  title: "List/ItemStacked",
+  args: {
+    headerText: "Attachment",
+    text: "Lorem ipsum dolor amat asum",
+    date: "21.04.21",
+  },
+  argTypes: {
+    item: {
+      table: {
+        category: "Props",
+      },
+      description: "An object which is bind in every scoped slot",
+    },
+    header: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+    avatar: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+    default: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+    buttons: {
+      table: {
+        category: "Scoped Slots",
+      },
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: "Component designed to display data from objects in stacked list elements.",
+      },
+    },
+  },
 }
 
-const Template = (args) => ({
-	components: { ListItemStacked, IconTrash, Button, Avatar },
-	setup() {
-		const item = {
-			header: args.headerText,
-			text: args.text,
-		}
-		return { item }
-	},
-	template: `<ListItemStacked :item="item">
+const Template = args => ({
+  components: { ListItemStacked, IconTrash, Button, Avatar },
+  setup() {
+    const item = {
+      header: args.headerText,
+      text: args.text,
+    }
+    return { item }
+  },
+  template: `<ListItemStacked :item="item">
 		<template #header="{ item }">
 			<span class="text-lg">{{ item.header }}</span>
 		</template>
@@ -81,16 +81,16 @@ const Template = (args) => ({
 export const ExampleOne = Template.bind({})
 
 const TemplateTwo = args => ({
-	components: { ListItemStacked, IconTrash, IconFolderOpen, Button, Avatar },
-	setup() {
-		const item = {
-			header: args.headerText,
-			text: args.text,
-			date: args.date,
-		}
-		return { item }
-	},
-	template: `<ListItemStacked :item="item">
+  components: { ListItemStacked, IconTrash, IconFolderOpen, Button, Avatar },
+  setup() {
+    const item = {
+      header: args.headerText,
+      text: args.text,
+      date: args.date,
+    }
+    return { item }
+  },
+  template: `<ListItemStacked :item="item">
 		<template #header="{ item }">
 			<span class="text-2xl">{{ item.header }}</span>
 				<br/>

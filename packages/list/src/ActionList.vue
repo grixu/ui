@@ -5,8 +5,8 @@
     </div>
     <ul class="overflow-y-auto">
       <li
-        v-for="item in paginator.data.value"
-        :key="item.id"
+        v-for="(item, index) in paginator.data.value"
+        :key="index"
         data-testid="action-list-item"
         class="p-2 my-1 rounded-md hover:bg-blue-50 transition-all duration-300"
       >
@@ -29,8 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import NavPagination from "@grixu/paginator/src/NavPagination.vue";
-import { usePaginator } from "@grixu/paginator/src/usePaginator";
+import { NavPagination, usePaginator } from "@grixu/paginator";
 import { toRefs } from "vue";
 import IconClose from '~icons/heroicons-solid/x'
 

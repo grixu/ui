@@ -10,16 +10,17 @@
     <NavPagination :paginator="paginator" />
   </div>
 </template>
+
 <script lang="ts">
 import {
   allowedComponents,
   isArrayNotEmpty,
-  ListWrapperComponent,
   isAllowedComponent
-} from "../utilities/ListWrapper";
-import { usePaginator } from "@grixu/paginator/src/usePaginator";
-import  NavPagination from "@grixu/paginator/src/NavPagination.vue";
+} from "./utilities/ListWrapper";
+import { NavPagination, usePaginator } from "@grixu/paginator";
 import {PropType, toRefs, computed, defineComponent} from "vue";
+
+export type ListWrapperComponent = keyof typeof allowedComponents
 
 export default defineComponent({
   name: "ListWrapper",
