@@ -1,4 +1,4 @@
-import { computed, ComputedRef, readonly, ref, Ref } from "vue";
+import { computed, ComputedRef, readonly, ref, Ref } from "vue"
 
 export interface Paginator<T> {
   inputData: Ref<Array<T>>
