@@ -1,4 +1,4 @@
-const base = require("../../jest.base.config")
+const base = require("@grixu/jest-config")
 const packageJson = require("./package")
 
 module.exports = {

@@ -43,26 +43,15 @@
     "precommit": "yarn lint"
   },
   "peerDependencies": {
-    "vue": "^3.2.22"
+    "vue": "^3.2.22",
+    "@iconify/json": "^1.1.435",
+    "unplugin-icons": "^0.12.23"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-typescript": "^7.16.0",
+    "@grixu/jest-config": "^1.0.0",
     "@grixu/eslint-config-grixu": "^1.0.0",
     "@grixu/rollup-config": "^1.0.0",
     "@grixu/stylelint-config": "^1.0.0",
-    "@types/jest": "^27.0.1",
-    "@vue/test-utils": "^2.0.0-rc.17",
-    "@vue/vue3-jest": "^27.0.0-alpha.3",
-    "babel-jest": "^27.3.1",
-    "jest": "^27.3.1",
-    "jest-serializer-vue": "^2.0.2",
-    "jest-transform-stub": "^2.0.0",
-    "jest-watch-typeahead": "^1.0.0",
-    "ts-jest": "^27.0.7",
-    "@storybook/vue3": "^6.4.0",
     "typescript": "^4.5.2",
     "@vuedx/typecheck": "^0.7.4",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
