@@ -16,7 +16,9 @@ const outputConfigs = {
     file: pkg.browser,
     format: "umd",
     minify: true,
-    css: true,
+  },
+  css: {
+    file: pkg.style,
   },
 }
 
