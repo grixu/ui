@@ -1,5 +1,5 @@
 {
-  "name": "@grixu/eslint-config-grixu",
+  "name": "@grixu/eslint-config",
   "version": "1.0.0",
   "description": "ESLint config",
   "keywords": [

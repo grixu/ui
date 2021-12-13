@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@grixu/jest-config": "^1.0.0",
-    "@grixu/eslint-config-grixu": "^1.0.0",
+    "@grixu/eslint-config": "^1.0.0",
     "@grixu/rollup-config": "^1.0.0",
     "@grixu/stylelint-config": "^1.0.0",
     "@grixu/paginator": "^1.0.0",

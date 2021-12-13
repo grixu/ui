@@ -1,3 +1,3 @@
 module.exports = {
-  extends: "@grixu/eslint-config-grixu",
+  extends: "@grixu/eslint-config",
 }
