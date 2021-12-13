@@ -2,10 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "dist/types",
+    "useDefineForClassFields": true,
+    "jsx": "preserve"
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.vue",
-    "types"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
