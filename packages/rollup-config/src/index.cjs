@@ -122,12 +122,12 @@ const createConfig = (format, config, banner, pkg) => {
         isGlobalBuild,
         isNodeBuild,
       ),
-      Icons({ compiler: 'vue3' }),
       resolve({
-        extensions: ['.mjs', '.js', '.json', '.node', '.ts']
+        extensions: ['.mjs', '.js', '.json', '.node', '.ts', '.vue']
       }),
-      commonjs(),
+      Icons({ compiler: 'vue3' }),
       vue(),
+      commonjs(),
       babel({
         presets: ['@babel/preset-typescript'],
         configFile: false,
