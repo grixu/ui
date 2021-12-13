@@ -1,3 +1,6 @@
+'use strict';
+
+const path = require("path");
 module.exports = {
   testEnvironment: "jsdom",
   moduleFileExtensions: [
@@ -21,7 +24,7 @@ module.exports = {
   // support the same @ -> src alias mapping in source code
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
-    "^~icons/.*": "<rootDir>/../../utilities/icons.js"
+    "^~icons/.*": path.join(__dirname, 'icons.js')
   },
   // serializer for snapshots
   snapshotSerializers: ["jest-serializer-vue"],
