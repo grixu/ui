@@ -69,10 +69,11 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint --fix .",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
     "prepare": "husky install",
+    "lint": "lerna run --concurrency 1 --stream lint --since HEAD --exclude-dependents",
+    "build": "lerna run --concurrency 1 --stream build --since HEAD --exclude-dependents",
     "precommit": "lerna run --concurrency 1 --stream precommit --since HEAD --exclude-dependents"
   }
 }
