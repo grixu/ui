@@ -12,17 +12,35 @@
   "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
   "homepage": "",
   "license": "MIT",
-  "main": "src/index.js",
+  "sideEffects": false,
+  "main": "./dist/index.cjs.js",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
+  },
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "types": "./dist/types/index.d.ts",
+  "style": "./dist/index.css",
   "directories": {
-    "lib": "src",
-    "test": "__tests__"
+    "src": "src",
+    "dist": "dist",
+    "test": "tests"
   },
   "files": [
-    "src"
+    "dist/**/*",
+    "src",
+    "README.md"
   ],
   "scripts": {
+    "build": "rollup -c rollup.config.js && vue-tsc --declaration --emitDeclarationOnly",
     "test": "jest",
-    "lint": "eslint . --fix"
+    "lint:js": "eslint . --fix",
+    "lint:css": "stylelint . --fix",
+    "lint": "yarn lint:js && yarn lint:css",
+    "precommit": "yarn lint"
   },
   "peerDependencies": {
     "vue": "^3.2.22"
@@ -31,11 +49,14 @@
     "@babel/core": "^7.16.0",
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
     "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
+    "@grixu/eslint-config-grixu": "^1.0.0",
+    "@grixu/rollup-config": "^1.0.0",
+    "@grixu/stylelint-config": "^1.0.0",
     "@types/jest": "^27.0.1",
     "@vue/test-utils": "^2.0.0-rc.17",
     "@vue/vue3-jest": "^27.0.0-alpha.3",
     "babel-jest": "^27.3.1",
-    "@grixu/eslint-config-grixu": "^1.0.0",
     "jest": "^27.3.1",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
@@ -43,8 +64,11 @@
     "ts-jest": "^27.0.7",
     "@storybook/vue3": "^6.4.0",
     "typescript": "^4.5.2",
+    "@vuedx/typecheck": "^0.7.4",
+    "@vuedx/typescript-plugin-vue": "^0.7.4",
     "vue": "3.2.22",
-    "@iconify/json": "^1.1.435",
-    "unplugin-icons": "^0.12.20"
+    "vue-tsc": "^0.29.8",
+    "windicss": "^3.2.1",
+    "unplugin-icons": "^0.12.23"
   }
 }
