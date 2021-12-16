@@ -11,6 +11,7 @@ This is UI library built upon:
 * `@grixu/avatar`
 * `@grixu/paginator`
 * `@grixu/list`
+* `@grixu/slideover`
 
 ## Available tools
 * `@grixu/eslint-config`
