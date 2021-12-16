@@ -12,6 +12,7 @@ This is UI library built upon:
 * `@grixu/paginator`
 * `@grixu/list`
 * `@grixu/slideover`
+* `@grixu/bagde`
 
 ## Available tools
 * `@grixu/eslint-config`
