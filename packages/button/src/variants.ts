@@ -18,6 +18,6 @@ export const variantsDefaults = {
   danger: false,
   warning: false,
   info: false,
-  link: true,
+  link: false,
   disabled: false,
 }
