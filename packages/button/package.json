@@ -7,9 +7,20 @@
     "vue3",
     "component"
   ],
-  "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
-  "homepage": "",
+  "contributors": [
+    "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+    "Mateusz Skrobiś <mateuszskrobis0707@gmail.com>",
+    "Samuel Baron <samuel.baron.pl@gmail.com>"
+  ],
+  "homepage": "https://github.com/grixu/ui#readme",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grixu/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grixu/ui/issues"
+  },
   "sideEffects": false,
   "main": "./dist/index.cjs.js",
   "exports": {

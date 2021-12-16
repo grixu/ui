@@ -10,7 +10,11 @@
     "list",
     "grid"
   ],
-  "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+  "contributors": [
+    "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+    "Mateusz Skrobiś <mateuszskrobis0707@gmail.com>",
+    "Samuel Baron <samuel.baron.pl@gmail.com>"
+  ],
   "homepage": "",
   "license": "MIT",
   "sideEffects": false,

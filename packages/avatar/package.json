@@ -9,7 +9,10 @@
     "ui",
     "avatar"
   ],
-  "author": "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+  "contributors": [
+    "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+    "Samuel Baron <samuel.baron.pl@gmail.com>"
+  ],
   "homepage": "",
   "license": "MIT",
   "sideEffects": false,
