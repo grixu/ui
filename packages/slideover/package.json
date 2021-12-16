@@ -1,0 +1,75 @@
+{
+  "name": "@grixu/slideover",
+  "version": "0.0.1",
+  "description": "Simple slideover made in Vue 3 with WindiCSS",
+  "keywords": [
+    "slideover",
+    "component",
+    "vue",
+    "vue3",
+    "windi"
+  ],
+  "contributors": [
+    "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+    "Samuel Baron <samuel.baron.pl@gmail.com>"
+  ],
+  "homepage": "https://github.com/grixu/ui#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grixu/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grixu/ui/issues"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.cjs.js",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
+  },
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "types": "./dist/types/index.d.ts",
+  "style": "./dist/index.css",
+  "directories": {
+    "src": "src",
+    "dist": "dist",
+    "test": "tests"
+  },
+  "files": [
+    "dist/**/*",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js && vue-tsc --declaration --emitDeclarationOnly",
+    "test": "jest",
+    "lint:js": "eslint . --fix",
+    "lint:css": "stylelint . --fix",
+    "lint": "yarn lint:js && yarn lint:css",
+    "precommit": "yarn lint"
+  },
+  "dependencies": {
+    "@grixu/button": "^1.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2",
+    "@iconify/json": "^1.1.435",
+    "unplugin-icons": "^0.12.23"
+  },
+  "devDependencies": {
+    "@grixu/eslint-config": "^1.0.0",
+    "@grixu/stylelint-config": "^1.0.0",
+    "@grixu/jest-config": "^1.0.0",
+    "@grixu/rollup-config": "^1.0.0",
+    "@vuedx/typecheck": "^0.7.4",
+    "@vuedx/typescript-plugin-vue": "^0.7.4",
+    "typescript": "^4.5.2",
+    "vue": "^3.2.22",
+    "vue-tsc": "^0.29.8",
+    "windicss": "^3.2.1"
+  }
+}
