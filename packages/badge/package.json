@@ -1,0 +1,73 @@
+{
+  "name": "@grixu/badge",
+  "version": "1.0.0",
+  "description": "Simple badge component in Vue 3, styled with WindiCSS",
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "badge",
+    "windi"
+  ],
+  "contributors": [
+    "Mateusz Gostański <mateusz.gostanski@gmail.com>",
+    "Samuel Baron <samuel.baron.pl@gmail.com>"
+  ],
+  "homepage": "https://github.com/grixu/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grixu/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grixu/ui/issues"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.cjs.js",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js"
+  },
+  "module": "./dist/index.esm.js",
+  "browser": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "types": "./dist/types/index.d.ts",
+  "style": "./dist/index.css",
+  "directories": {
+    "src": "src",
+    "dist": "dist",
+    "test": "tests"
+  },
+  "files": [
+    "dist/**/*",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js && vue-tsc --declaration --emitDeclarationOnly",
+    "test": "jest",
+    "lint:js": "eslint . --fix",
+    "lint:css": "stylelint . --fix",
+    "lint": "yarn lint:js && yarn lint:css",
+    "precommit": "yarn lint"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.22"
+  },
+  "devDependencies": {
+    "@grixu/eslint-config": "^1.0.0",
+    "@grixu/jest-config": "^1.0.0",
+    "@grixu/rollup-config": "^1.0.0",
+    "@grixu/stylelint-config": "^1.0.0",
+    "@vuedx/typecheck": "^0.7.4",
+    "@vuedx/typescript-plugin-vue": "^0.7.4",
+    "typescript": "^4.5.2",
+    "vue": "3.2.22",
+    "vue-tsc": "^0.29.8",
+    "windicss": "^3.2.1"
+  },
+  "dependencies": {
+    "vue-use-variant": "^0.1.1"
+  }
+}
