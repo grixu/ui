@@ -32,7 +32,7 @@ describe("Avatar", () => {
 
   it("emit click event", async () => {
     const wrapper = mount(Image())
-    await expect(wrapper.find('[data-testid="avatar-wrapper"]').trigger("click"))
+    await wrapper.find('[data-testid="avatar-wrapper"]').trigger("click")
 
     expect(wrapper.emitted("click")).toBeTruthy()
   })
