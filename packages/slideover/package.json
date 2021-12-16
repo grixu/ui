@@ -1,6 +1,6 @@
 {
   "name": "@grixu/slideover",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple slideover made in Vue 3 with WindiCSS",
   "keywords": [
     "slideover",

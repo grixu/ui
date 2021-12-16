@@ -52,7 +52,7 @@ const emit = defineEmits<{
 }>()
 const close = () => emit('close')
 
-const slideoverRef = ref<HTMLElement>(null)
-onMounted(() => nextTick(() => slideoverRef.value.focus()))
+const slideoverRef = ref<HTMLElement>()
+onMounted(() => nextTick(() => slideoverRef.value?.focus()))
 
 </script>
