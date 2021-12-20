@@ -1,7 +1,7 @@
 import { composeStories } from "@storybook/testing-vue3"
 import { mount } from "@vue/test-utils"
 // @ts-ignore
-import * as stories from "../stories/ActionList.stories.js"
+import * as stories from "../stories/Action.stories.js"
 
 describe("ActionList", () => {
   const { LongList } = composeStories(stories)

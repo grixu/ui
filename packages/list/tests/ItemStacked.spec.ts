@@ -1,7 +1,7 @@
 import { composeStories } from "@storybook/testing-vue3"
 import { mount } from "@vue/test-utils"
 // @ts-ignore
-import * as stories from "../stories/ListItemStacked.stories.js"
+import * as stories from "../stories/ItemStacked.stories.js"
 
 describe("ListItemStacked", () => {
   const { ExampleTwo } = composeStories(stories)

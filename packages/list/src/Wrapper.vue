@@ -16,7 +16,7 @@ import {
   allowedComponents,
   isArrayNotEmpty,
   isAllowedComponent
-} from "./utilities/ListWrapper";
+} from "./utilities";
 import { NavPagination, usePaginator } from "@grixu/paginator";
 import {PropType, toRefs, computed, defineComponent} from "vue";
 

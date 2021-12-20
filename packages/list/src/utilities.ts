@@ -1,7 +1,7 @@
-import ListItemGrid from "../ItemGrid.vue"
-import ListItemStacked from "../ItemStacked.vue"
+import ListItemGrid from "./ItemGrid.vue"
+import ListItemStacked from "./ItemStacked.vue"
 import { z } from "zod"
-import { ListWrapperComponents } from "../../types"
+import { ListWrapperComponents } from "./types"
 
 export const allowedComponents: ListWrapperComponents = {
   stack: {

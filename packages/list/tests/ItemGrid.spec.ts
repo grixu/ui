@@ -1,7 +1,7 @@
 import { composeStories } from "@storybook/testing-vue3"
 import { mount } from "@vue/test-utils"
 // @ts-ignore
-import * as stories from "../stories/ListItemGrid.stories.js"
+import * as stories from "../stories/ItemGrid.stories.js"
 
 describe("ListItemGrid", () => {
   const { ExampleOne } = composeStories(stories)

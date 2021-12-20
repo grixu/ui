@@ -48,7 +48,8 @@
     "precommit": "yarn lint"
   },
   "dependencies": {
-    "@grixu/paginator": "^1.0.0"
+    "@grixu/paginator": "^1.0.0",
+    "scule": "^0.2.1"
   },
   "peerDependencies": {
     "@iconify/json": "^1.1.435",
@@ -58,6 +59,7 @@
   },
   "devDependencies": {
     "@grixu/avatar": "^1.0.0",
+    "@grixu/badge": "^1.0.0",
     "@grixu/button": "^1.0.0",
     "@grixu/eslint-config": "^1.0.0",
     "@grixu/jest-config": "^1.0.0",

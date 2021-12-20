@@ -1,7 +1,8 @@
-import ListItemGrid from "./ItemGrid.vue"
-import ListItemStacked from "./ItemStacked.vue"
-import ListWrapper from "./Wrapper.vue"
-import ActionList from "./ActionList.vue"
-import { isArrayNotEmpty, isAllowedComponent } from "./utilities/ListWrapper"
+import ItemGrid from "./ItemGrid.vue"
+import ItemStacked from "./ItemStacked.vue"
+import Wrapper from "./Wrapper.vue"
+import ActionList from "./Action.vue"
+import Description from "./Description.vue"
+import { isArrayNotEmpty, isAllowedComponent } from "./utilities"
 
-export { ListWrapper, ActionList, ListItemStacked, ListItemGrid, isArrayNotEmpty, isAllowedComponent }
+export { Wrapper, ActionList, ItemStacked, ItemGrid, Description, isArrayNotEmpty, isAllowedComponent }

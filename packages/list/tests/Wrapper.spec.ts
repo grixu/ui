@@ -1,7 +1,7 @@
 import { composeStories } from "@storybook/testing-vue3"
 import { mount } from "@vue/test-utils"
 // @ts-ignore
-import * as stories from "../stories/ListWrapper.stories.js"
+import * as stories from "../stories/Wrapper.stories.js"
 
 describe("ListWrapper", () => {
   const { Grid, Stack } = composeStories(stories)
