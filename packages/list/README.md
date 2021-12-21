@@ -1,8 +1,9 @@
 # @grixu/list
 
-It's set of list components. There main two components:
-* `ListWrapper`
-* `ActionList`
+It's set of list components. There are components:
+* `Wrapper`
+* `Action`
+* `Description`
 
 ## List Wrapper
 
@@ -22,7 +23,7 @@ It is a wrapper component which allows you to display an array of objects as a s
 </template>
 
 <script setup>
-import { ListWrapper } from "@grixu/list"
+import { Wrapper } from "@grixu/list"
 </script>
 ```
 
@@ -47,7 +48,71 @@ we provide close icon (which remove action), but you can adjust it, through slot
 </template>
 
 <script setup>
-import { ActionList } from "@grixu/list"
+import { Action } from "@grixu/list"
+</script>
+```
+
+## Description List
+
+Description is component designed to display details - information wrapped into an object.
+
+```vue
+<template>
+  <Description :item="item">
+    <template #id="{ content }"> {{ content }}</template>
+    <template #name="{ content }"> {{ content }}</template>
+    <template #invoice="{ content }">
+      <Badge success>Invoice issued</Badge>
+    </template>
+    <template #salesmens="{ content }">
+      <p class="flex gap-x-2">
+        <Avatar v-for="item in content" :key="item" :text="item" class="mr-1"></Avatar>
+      </p>
+    </template>
+    <template #area="{ content, value }">
+      <p class="text-lg font-semibold underline"> {{ content }}</p>
+    </template>
+  </Description>
+</template>
+
+<script setup>
+import {Description} from "@grixu/list"
+
+const item =  {
+  ID: 12312321,
+  customer: "Mateusz Skrobiś",
+  invoice: false,
+  salesmens: ["Marek S", "Jarek D", "Czarek M"],
+  address: "Polna 140B",
+  area: "North",
+}
+
+const itemWithLabels = {
+  ID: {
+    label: "Lp",
+    content: 123,
+  },
+  customer: {
+    label: "Klient",
+    content: "Mateusz Skrobiś",
+  },
+  invoice: {
+    label: "Fakturowanie?",
+    content: false,
+  },
+  salesmens: {
+    label: "Sprzedawcy",
+    content: ["Marek S", "Jarek D", "Czarek M"],
+  },
+  address: {
+    label: "Ulica",
+    content: "Polna 140B",
+  },
+  area: {
+    label: "Oddział",
+    content: "North",
+  },
+}
 </script>
 ```
 
