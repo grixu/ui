@@ -26,7 +26,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { Paginator } from "./usePaginator";
 
 defineProps<{ paginator: Paginator<unknown> }>()

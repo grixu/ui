@@ -1,17 +1,17 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "dist/types",
+    "outDir": "types",
     "types": [
       "webpack-env",
       "node",
       "jest",
       "unplugin-icons/types/vue3",
+      "./shims-vue"
     ]
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.vue",
-    "types"
+    "src/**/*.vue"
   ]
 }

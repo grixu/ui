@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils"
+import { composeStories } from "@storybook/testing-vue3"
 // @ts-ignore
 import * as stories from "../stories/Badge.stories"
-import { composeStories } from "@storybook/testing-vue3"
 
 describe("Badge", () => {
   const { Success, Warning, Error, Info } = composeStories(stories)

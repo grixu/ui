@@ -1,10 +1,5 @@
 <template>
-  <button
-    :disabled="disabled"
-    :class="css"
-    data-testid="button"
-    @click.stop="emitClick"
-  >
+  <button :disabled="disabled" :class="css" data-testid="button" @click.stop="emitClick">
     <div v-if="withIcon" :class="{ 'mr-1': isText }" class="flex pt-0.5" data-testid="button-icon">
       <slot name="icon"></slot>
     </div>
@@ -16,8 +11,8 @@
 
 <script setup lang="ts">
 import { computed, toRefs, useSlots } from "vue"
-import {variantsDefaults, variants} from "./variants"
-import {UseVariant, useVariant} from "vue-use-variant";
+import { variantsDefaults, variants } from "./variants"
+import { UseVariant, useVariant } from "vue-use-variant"
 
 interface ButtonProps {
   link?: boolean

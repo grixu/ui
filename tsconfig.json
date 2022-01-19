@@ -12,6 +12,7 @@
     "noEmit": false,
     "declaration": true,
     "sourceMap": true,
+    "emitDeclarationOnly": true,
 
     "esModuleInterop": true,
     "removeComments": true,
@@ -22,12 +23,8 @@
     "types": [
       "webpack-env",
       "node",
-      "jest"
-    ],
-    "plugins": [
-      {
-        "name": "@vuedx/typescript-plugin-vue",
-      }
+      "jest",
+      "./shims-vue"
     ]
   },
   "exclude": [

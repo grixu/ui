@@ -23,16 +23,18 @@
   },
   "license": "MIT",
   "sideEffects": false,
-  "main": "./dist/index.cjs.js",
   "exports": {
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs.js"
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
   },
-  "module": "./dist/index.esm.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "browser": "./dist/index.umd.js",
   "unpkg": "./dist/index.umd.js",
   "jsdelivr": "./dist/index.umd.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "style": "./dist/index.css",
   "directories": {
     "src": "src",
@@ -45,7 +47,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js && vue-tsc --declaration --emitDeclarationOnly",
+    "build": "vue-tsc && rollup -c rollup.config.js",
     "test": "jest",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint . --fix",
@@ -53,18 +55,16 @@
     "precommit": "yarn lint"
   },
   "peerDependencies": {
-    "vue": "^3.2.22"
+    "vue": "^3.2"
   },
   "devDependencies": {
     "@grixu/eslint-config": "^1.0.0",
     "@grixu/jest-config": "^1.0.0",
     "@grixu/rollup-config": "^1.0.0",
     "@grixu/stylelint-config": "^1.0.0",
-    "@vuedx/typecheck": "^0.7.4",
-    "@vuedx/typescript-plugin-vue": "^0.7.4",
+    "vue-tsc": "^0.30.6",
     "typescript": "^4.5.2",
-    "vue": "3.2.22",
-    "vue-tsc": "^0.29.8",
+    "vue": "^3.2.27",
     "windicss": "^3.2.1"
   },
   "dependencies": {

@@ -1,4 +1,4 @@
-# @grixu/paginate
+# @grixu/paginator
 
 It's simple pagination component & composable written in Vue 3, styled with WindiCSS.
 

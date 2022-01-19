@@ -1,4 +1,4 @@
 import NavPagination from "./NavPagination.vue"
-import { usePaginator } from "./usePaginator"
+export * from "./usePaginator"
 
-export { NavPagination, usePaginator }
+export { NavPagination }

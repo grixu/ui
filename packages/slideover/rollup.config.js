@@ -20,6 +20,9 @@ const outputConfigs = {
   css: {
     file: pkg.style,
   },
+  dts: {
+    file: pkg.types,
+  },
 }
 
 const allFormats = Object.keys(outputConfigs)

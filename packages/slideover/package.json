@@ -23,12 +23,14 @@
     "url": "https://github.com/grixu/ui/issues"
   },
   "sideEffects": false,
-  "main": "./dist/index.cjs.js",
   "exports": {
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs.js"
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
   },
-  "module": "./dist/index.esm.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "browser": "./dist/index.umd.js",
   "unpkg": "./dist/index.umd.js",
   "jsdelivr": "./dist/index.umd.js",
@@ -45,7 +47,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js && vue-tsc --declaration --emitDeclarationOnly",
+    "build": "vue-tsc && rollup -c rollup.config.js",
     "test": "jest",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint . --fix",
@@ -56,9 +58,9 @@
     "@grixu/button": "^1.0.0"
   },
   "peerDependencies": {
-    "vue": "^3.2.22",
-    "@iconify/json": "^1.1.435",
-    "unplugin-icons": "^0.12.23"
+    "vue": "^3.2",
+    "@iconify/json": "^1.x",
+    "unplugin-icons": "^0.x"
   },
   "devDependencies": {
     "@grixu/eslint-config": "^1.0.0",
@@ -68,7 +70,8 @@
     "@vuedx/typecheck": "^0.7.4",
     "@vuedx/typescript-plugin-vue": "^0.7.4",
     "typescript": "^4.5.2",
-    "vue-tsc": "^0.29.8",
+    "vue-tsc": "^0.30.6",
+    "vue": "^3.2.27",
     "windicss": "^3.2.1"
   }
 }
