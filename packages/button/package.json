@@ -31,7 +31,7 @@
   "browser": "./dist/index.umd.js",
   "unpkg": "./dist/index.umd.js",
   "jsdelivr": "./dist/index.umd.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "style": "./dist/index.css",
   "directories": {
     "src": "src",
@@ -44,7 +44,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js && vue-tsc --declaration --emitDeclarationOnly",
+    "build": "tsc --declaration --emitDeclarationOnly && rollup -c rollup.config.js",
     "test": "jest",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint . --fix",
