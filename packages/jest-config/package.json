@@ -24,16 +24,16 @@
     "jest": "^27.0",
     "ts-jest": "^27.0",
     "typescript": "^4.5",
-    "vue": "3.2"
+    "vue": "^3.2"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
     "@babel/preset-env": "^7.16.4",
-    "@storybook/vue3": "^6.4.0",
     "@types/jest": "^27.0.1",
-    "@vue/test-utils": "^2.0.0-rc.17",
-    "@vue/vue3-jest": "^27.0.0-alpha.3",
+    "@storybook/testing-vue3": "^0.0.1",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "@vue/vue3-jest": "^27.0.0-alpha.4",
     "babel-jest": "^27.3.1",
     "jest": "^27.3.1",
     "jest-serializer-vue": "^2.0.2",
@@ -41,6 +41,6 @@
     "jest-watch-typeahead": "^1.0.0",
     "ts-jest": "^27.0.7",
     "typescript": "^4.5.2",
-    "vue": "3.2.22"
+    "vue": "^3.2.22"
   }
 }
