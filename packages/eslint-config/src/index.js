@@ -12,7 +12,7 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:storybook/recommended"
   ],
-  ignorePatterns: ["dist/**/*", "coverage/**/*"],
+  ignorePatterns: ["dist/**/*", "coverage/**/*", "types/**/*"],
   parserOptions: {
     ecmaVersion: 2020,
   },
@@ -29,6 +29,7 @@ module.exports = {
         useTabs: false,
         trailingComma: "es5",
         singleQuote: false,
+        bracketSameLine: true,
         quoteProps: "consistent",
         bracketSpacing: true,
         arrowParens: "avoid",
