@@ -1,6 +1,6 @@
 {
   "name": "@grixu/list",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "List wrapper for presenting array of data as stacked or grid list",
   "keywords": [
     "vue",
@@ -18,16 +18,18 @@
   "homepage": "",
   "license": "MIT",
   "sideEffects": false,
-  "main": "./dist/index.cjs.js",
   "exports": {
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs.js"
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
   },
-  "module": "./dist/index.esm.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "browser": "./dist/index.umd.js",
   "unpkg": "./dist/index.umd.js",
   "jsdelivr": "./dist/index.umd.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "style": "./dist/index.css",
   "directories": {
     "src": "src",
@@ -40,7 +42,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js && vue-tsc --declaration --emitDeclarationOnly",
+    "build": "vue-tsc && rollup -c rollup.config.js",
     "test": "jest",
     "lint:js": "eslint . --fix",
     "lint:css": "stylelint . --fix",
@@ -52,10 +54,10 @@
     "scule": "^0.2.1"
   },
   "peerDependencies": {
-    "@iconify/json": "^1.1.435",
-    "unplugin-icons": "^0.12.20",
-    "vue": "^3.2.22",
-    "zod": "^3.11.6"
+    "@iconify/json": "^1.x",
+    "unplugin-icons": "^0.x",
+    "vue": "^3.2",
+    "zod": "^3.x"
   },
   "devDependencies": {
     "@grixu/avatar": "^1.0.0",
@@ -68,8 +70,9 @@
     "@grixu/stylelint-config": "^1.0.0",
     "@iconify/json": "^1.1.435",
     "typescript": "^4.5.2",
+    "vue-tsc": "^0.30.6",
     "unplugin-icons": "^0.12.20",
-    "vue": "3.2.22",
+    "vue": "^3.2.27",
     "zod": "^3.11.6"
   }
 }

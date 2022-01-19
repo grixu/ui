@@ -22,6 +22,9 @@ const outputConfigs = {
     file: pkg.style,
     minify: true,
   },
+  dts: {
+    file: pkg.types,
+  },
 }
 
 const allFormats = Object.keys(outputConfigs)
