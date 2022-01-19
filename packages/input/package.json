@@ -1,0 +1,76 @@
+{
+  "name": "@grixu/input",
+  "version": "0.1.0",
+  "description": "Collection of input components base on <input /> tag",
+  "keywords": [
+    "input",
+    "vue",
+    "vue3",
+    "ui",
+    "componentns"
+  ],
+  "contributors": [
+    "Mateusz Gostański <mateusz.gostanski@gmail.com>"
+  ],
+  "homepage": "https://github.com/grixu/ui#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grixu/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grixu/ui/issues"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "browser": "./dist/index.umd.js",
+  "unpkg": "./dist/index.umd.js",
+  "jsdelivr": "./dist/index.umd.js",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/index.css",
+  "directories": {
+    "src": "src",
+    "dist": "dist",
+    "test": "tests"
+  },
+  "files": [
+    "dist/**/*",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vue-tsc && rollup -c rollup.config.js",
+    "test": "jest",
+    "lint:js": "eslint . --fix",
+    "lint:css": "stylelint . --fix",
+    "lint": "yarn lint:js && yarn lint:css",
+    "precommit": "yarn lint"
+  },
+  "peerDependencies": {
+    "@vueuse/core": "^7.5",
+    "uuid": "^8.x",
+    "vue": "^3.2"
+  },
+  "devDependencies": {
+    "@grixu/eslint-config": "^1.0.0",
+    "@grixu/jest-config": "^1.0.0",
+    "@grixu/rollup-config": "^1.0.0",
+    "@grixu/stylelint-config": "^1.0.0",
+    "@types/uuid": "^8.3.4",
+    "typescript": "^4.5.2",
+    "vue": "^3.2.27",
+    "vue-tsc": "^0.30.6",
+    "windicss": "^3.2.1"
+  },
+  "dependencies": {
+    "@vueuse/core": "^7.5.2",
+    "uuid": "^8.3.2"
+  }
+}
