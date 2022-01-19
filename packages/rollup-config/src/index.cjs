@@ -8,6 +8,7 @@ const WindiCSS = require('rollup-plugin-windicss').default
 const { babel } = require('@rollup/plugin-babel')
 const cssOnly = require('rollup-plugin-css-only')
 const Icons = require('unplugin-icons/rollup')
+const dts = require('rollup-plugin-dts').default
 const path = require("path");
 
 const getAuthors = (pkg) => {
@@ -78,6 +79,10 @@ const createConfig = (format, config, banner, pkg) => {
     return createCssConfig(config, banner)
   }
 
+  if (format === 'dts') {
+    return createDtsConfig(config, banner)
+  }
+
   const { file: fileName, format: fileFormat, minify } = config
   const output = {
     format: fileFormat,
@@ -131,6 +136,7 @@ const createConfig = (format, config, banner, pkg) => {
       babel({
         presets: ['@babel/preset-typescript'],
         configFile: false,
+        babelHelpers: 'bundled',
         extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue', '.ts', '.tsx']
       }),
       ...productionPlugins
@@ -160,9 +166,28 @@ const createCssConfig = (config, banner = '') => {
   }
 }
 
+const createDtsConfig = (config, banner = '') => {
+  const { file: fileName, input } = config
+  const output = {
+    format: 'es',
+    file: fileName,
+    banner
+  }
+
+  return {
+    input: input || 'types/index.d.ts',
+    output,
+    plugins: [
+      dts()
+    ],
+    external: ['vue'],
+  }
+}
+
 module.exports = {
   createConfig,
   createCssConfig,
+  createDtsConfig,
   createReplacePlugin,
   createBanner
 }
